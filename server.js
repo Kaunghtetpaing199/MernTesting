@@ -41,12 +41,11 @@ const newBlogPost = new BlogPost(data);
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use(morgan("tiny"));
-
-app.use("/api", routes);
-
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("crush-course/build"));
 }
+app.use(morgan("tiny"));
+
+app.use("/api", routes);
 
 app.listen(port, () => console.log(`Server start running at port ${port}`));
