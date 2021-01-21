@@ -1,0 +1,25 @@
+{
+  "name": "mern-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Kaung Htet Paing",
+  "license": "MIT",
+  "scripts": {
+    "build": "cd crush-course && yarn build",
+    "install-client": "cd crush-course && yarn add",
+    "heroku-postbuild": "yarn run install-client && yarn run build",
+    "start": "node server",
+    "client": "cd crush-course && yarn start",
+    "dev": "concurrently -n 'server,client' -c 'blue,green'  \"nodemon server.js\" \"yarn run client\""
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "concurrently": "^5.3.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.12",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
