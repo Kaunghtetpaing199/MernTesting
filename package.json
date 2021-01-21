@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "cd crush-course && yarn build",
-    "install-client": "cd crush-course && yarn add",
+    "install-client": "cd crush-course && yarn install",
     "heroku-postbuild": "yarn run install-client && yarn run build",
     "start": "node server",
     "client": "cd crush-course && yarn start",
