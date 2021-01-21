@@ -10,10 +10,10 @@ const routes = require("./router/api");
 
 const BlogPost = require("./models/BlogPost");
 
-const MONGODB_URL =
-  "mongodb://kaunghtetpaing:kaunghtet199@cluster0-shard-00-00.hbnks.mongodb.net:27017,cluster0-shard-00-01.hbnks.mongodb.net:27017,cluster0-shard-00-02.hbnks.mongodb.net:27017/storybook?ssl=true&replicaSet=atlas-11n5u4-shard-0&authSource=admin&retryWrites=true&w=majority";
+// const MONGODB_URL =
+//   "mongodb://kaunghtetpaing:kaunghtet199@cluster0-shard-00-00.hbnks.mongodb.net:27017,cluster0-shard-00-01.hbnks.mongodb.net:27017,cluster0-shard-00-02.hbnks.mongodb.net:27017/storybook?ssl=true&replicaSet=atlas-11n5u4-shard-0&authSource=admin&retryWrites=true&w=majority";
 
-mongoose.connect(MONGODB_URL || "mongodb://localhost/mern_test", {
+mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost/mern_test", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
