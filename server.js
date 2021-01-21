@@ -42,7 +42,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("crush-course/build"));
+  app.use(express.static(path.join(rootDir, "crush-course", "build")));
 }
 app.use(morgan("tiny"));
 
