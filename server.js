@@ -40,7 +40,7 @@ const newBlogPost = new BlogPost(data);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-
+const rootDir = path.dirname(process.mainModule.filename);
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(rootDir, "crush-course", "build")));
 }

@@ -8,7 +8,7 @@
     "build": "cd crush-course && yarn build",
     "install-client": "cd crush-course && yarn install",
     "heroku-postbuild": "yarn run install-client && yarn run build",
-    "start": "node server",
+    "start": "node server.js",
     "client": "cd crush-course && yarn start",
     "dev": "concurrently -n 'server,client' -c 'blue,green'  \"nodemon server.js\" \"yarn run client\""
   },
