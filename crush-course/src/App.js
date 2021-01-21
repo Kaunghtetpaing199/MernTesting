@@ -60,7 +60,7 @@ function App() {
   };
   return (
     <div className="app">
-      <h2>Welcome to the best app ever</h2>
+      <h2>Welcome to My MENR project</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-input">
           <input
